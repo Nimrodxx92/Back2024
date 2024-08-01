@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Alimento Pro Plan",
+    "description": "Para perro adulto y raza mediana. Sabor pollo.",
+    "price": 21690,
+    "thumbnail": "https://ejemplo.com/pro-plan-perro",
+    "code": "146004",
+    "stock": 30
+  },
+  {
+    "id": 2,
+    "title": "Alimento Royal Canin",
+    "description": "Para perro adulto y raza mediana. Calidad premium.",
+    "price": 18990,
+    "thumbnail": "https://ejemplo.com/royal-canin-perro",
+    "code": "156151",
+    "stock": 100
+  },
+  {
+    "id": 3,
+    "title": "Alimento Royal Canin Fit",
+    "description": "Para gato adulto. Calidad premium.",
+    "price": 72100,
+    "thumbnail": "https://ejemplo.com/royal-fit-gato",
+    "code": "165432",
+    "stock": 50
+  },
+  {
+    "id": 4,
+    "title": "Cama para Perro XXL",
+    "description": "Cama de gran tamaño para perros grandes. Material resistente y cómodo.",
+    "price": 54990,
+    "thumbnail": "https://ejemplo.com/cama-xxl",
+    "code": "174839",
+    "stock": 20
+  },
+  {
+    "id": 5,
+    "title": "Alimento Eukanuba",
+    "description": "Para perro raza mediana.",
+    "price": 61700,
+    "thumbnail": "https://ejemplo.com/eukanuba-perro",
+    "code": "185643",
+    "stock": 40
+  },
+  {
+    "id": 6,
+    "title": "Alimento Nutrique Toy",
+    "description": "Para perro raza pequeña",
+    "price": 43890,
+    "thumbnail": "https://ejemplo.com/nutrique-toy",
+    "code": "196754",
+    "stock": 60
+  },
+  {
+    "id": 7,
+    "title": "Collar Reflectante",
+    "description": "Collar con cintilla reflectante para mayor seguridad en la noche.",
+    "price": 1690,
+    "thumbnail": "https://ejemplo.com/collar-reflectante",
+    "code": "207865",
+    "stock": 35
+  },
+  {
+    "id": 8,
+    "title": "Lata Agility Merluza",
+    "description": "Linea Standard para gato",
+    "price": 3000,
+    "thumbnail": "https://ejemplo.com/agility-merluza",
+    "code": "218976",
+    "stock": 45
+  },
+  {
+    "id": 9,
+    "title": "Alimento Pro Plan Active",
+    "description": "Todas las razas de perros",
+    "price": 22491,
+    "thumbnail": "https://ejemplo.com/por-plan-active",
+    "code": "229087",
+    "stock": 75
+  },
+  {
+    "id": 10,
+    "title": "Alimento Excellent Kitten",
+    "description": "Sabor pollo y arroz para gato",
+    "price": 47190,
+    "thumbnail": "https://ejemplo.com/kitten-excellent",
+    "code": "230198",
+    "stock": 85
+  }
+]
