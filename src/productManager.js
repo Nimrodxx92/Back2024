@@ -45,8 +45,17 @@ class ProductManager {
   // Agrego un producto con un nuevo ID
   async addProduct(product) {
     console.log("Producto recibido para agregar:", product);
-    const { title, description, price, thumbnail, code, stock } = product;
-    if (!title || !description || !price || !code || !thumbnail || !stock) {
+    const { title, description, price, thumbnail, code, stock, category } =
+      product;
+    if (
+      !title ||
+      !description ||
+      !price ||
+      !code ||
+      !thumbnail ||
+      !stock ||
+      !category
+    ) {
       console.error("Todos los campos son obligatorios");
       return;
     }
@@ -70,6 +79,8 @@ class ProductManager {
       price,
       thumbnail,
       code,
+      category,
+      status: true,
       stock,
     };
 

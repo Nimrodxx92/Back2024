@@ -6,6 +6,8 @@
     "price": 21690,
     "thumbnail": "https://ejemplo.com/pro-plan-perro",
     "code": "146004",
+    "category": "Perros",
+    "status": true,
     "stock": 30
   },
   {
@@ -15,6 +17,8 @@
     "price": 18990,
     "thumbnail": "https://ejemplo.com/royal-canin-perro",
     "code": "156151",
+    "category": "Perros",
+    "status": true,
     "stock": 100
   },
   {
@@ -24,6 +28,8 @@
     "price": 72100,
     "thumbnail": "https://ejemplo.com/royal-fit-gato",
     "code": "165432",
+    "category": "Gatos",
+    "status": true,
     "stock": 50
   },
   {
@@ -33,6 +39,8 @@
     "price": 54990,
     "thumbnail": "https://ejemplo.com/cama-xxl",
     "code": "174839",
+    "category": "Accesorios",
+    "status": true,
     "stock": 20
   },
   {
@@ -42,6 +50,8 @@
     "price": 61700,
     "thumbnail": "https://ejemplo.com/eukanuba-perro",
     "code": "185643",
+    "category": "Perros",
+    "status": true,
     "stock": 40
   },
   {
@@ -51,6 +61,8 @@
     "price": 43890,
     "thumbnail": "https://ejemplo.com/nutrique-toy",
     "code": "196754",
+    "category": "Perros",
+    "status": true,
     "stock": 60
   },
   {
@@ -60,6 +72,8 @@
     "price": 1690,
     "thumbnail": "https://ejemplo.com/collar-reflectante",
     "code": "207865",
+    "category": "Accesorios",
+    "status": true,
     "stock": 35
   },
   {
@@ -69,6 +83,8 @@
     "price": 3000,
     "thumbnail": "https://ejemplo.com/agility-merluza",
     "code": "218976",
+    "category": "Gatos",
+    "status": true,
     "stock": 45
   },
   {
@@ -78,6 +94,8 @@
     "price": 22491,
     "thumbnail": "https://ejemplo.com/por-plan-active",
     "code": "229087",
+    "category": "Perros",
+    "status": true,
     "stock": 75
   },
   {
@@ -87,6 +105,19 @@
     "price": 47190,
     "thumbnail": "https://ejemplo.com/kitten-excellent",
     "code": "230198",
+    "category": "Gatos",
+    "status": false,
     "stock": 85
+  },
+  {
+    "id": 11,
+    "title": "Probando Postman",
+    "description": "Una prueba",
+    "price": 15,
+    "thumbnail": "https://ejemplo.com/prueba",
+    "code": "578965",
+    "stock": 12,
+    "status": true,
+    "category": "Gatos"
   }
 ]
