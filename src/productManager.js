@@ -2,7 +2,7 @@ const fs = require("fs").promises;
 
 class ProductManager {
   constructor() {
-    this.productsJson = "./products.json";
+    this.productsJson = "src/data/products.json";
     this.products = [];
     this.loadProducts(); // Carga los productos al iniciar
   }

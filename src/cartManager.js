@@ -2,7 +2,7 @@ const fs = require("fs").promises;
 
 class CartManager {
   constructor() {
-    this.cartsJson = "./carts.json";
+    this.cartsJson = "src/data/carts.json";
     this.carts = [];
     this.loadCarts(); // Cargar los carritos al iniciar
   }
