@@ -8,10 +8,7 @@ router.get("/", async (req, res) => {
   try {
     const { limit } = req.query;
     const productsDB = await productManager.getProducts(limit);
-    return res.status(200).json({
-      message: "Productos cargados correctamente",
-      data: productsDB,
-    });
+    return res.status(200).render("home.handlebars", { products: productsDB });
   } catch (error) {
     return res.status(500).json({
       error: error.message,

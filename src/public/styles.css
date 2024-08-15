@@ -1,0 +1,58 @@
+main h1 {
+  text-align: center;
+}
+
+.products__container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+
+.products-list {
+  border: 1px solid #bbbaba;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.products-list img {
+  border-bottom: 1px solid #bbbaba;
+  margin-bottom: 8px;
+}
+
+.products-list h2 {
+  font-size: 20px;
+}
+
+.products-list p {
+  margin: 10px 0;
+}
+
+.products-list .price {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Formulario productos para agregar */
+
+.list-form-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 20px;
+}
+#productForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#deleteProductForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
