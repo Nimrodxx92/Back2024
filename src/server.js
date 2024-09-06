@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const handlebars = require("express-handlebars");
 const http = require("http");
 const setupSocketIo = require("./sockets");
+const mongoConnect = require("./db/index");
 
 const app = express();
 const server = http.createServer(app);
@@ -26,6 +27,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/", router);
+mongoConnect();
 
 server.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
