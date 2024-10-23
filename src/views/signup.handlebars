@@ -1,0 +1,67 @@
+<h2>Signup</h2>
+
+<form id="signupForm" class="formSignup" onsubmit="submitForm(); return false;">
+
+  <label>
+    Nombre:
+    <input class="input" id="nombre" type="text" required />
+  </label>
+
+  <label>
+    Apellido:
+    <input class="input" id="apellido" type="text" required />
+  </label>
+
+  <label>
+    Correo:
+    <input
+      class="input"
+      id="email"
+      type="email"
+      placeholder="Tu correo"
+      required
+    />
+  </label>
+
+  <label>
+    Edad:
+    <input
+      class="input"
+      id="age"
+      type="number"
+      min="0"
+      placeholder="Tu edad"
+      required
+    />
+  </label>
+
+  <label>
+    Contraseña:
+    <input
+      class="input"
+      id="password"
+      type="password"
+      placeholder="Tu contraseña"
+      required
+    />
+  </label>
+
+  <label>
+    Confirmar Contraseña:
+    <input
+      class="input"
+      id="confirm_password"
+      type="password"
+      placeholder="Confirma tu contraseña"
+      required
+    />
+  </label>
+
+  <span id="error-message" style="color:red; display:none;">Las contraseñas no
+    coinciden</span>
+
+  <button type="submit" class="submit">Crear cuenta</button>
+  <p class="signin">¿Ya tienes una cuenta? <a href="/login">Ingresar</a> </p>
+</form>
+
+<script src="/js/signup.js"></script>

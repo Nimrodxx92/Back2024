@@ -1,6 +1,5 @@
 function addToCart(productId) {
   fetch("/cartsDB/add-to-cart", {
-    // Asegúrate de que la URL es la correcta
     method: "POST",
     headers: {
       "Content-Type": "application/json",
