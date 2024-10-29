@@ -5,8 +5,8 @@ const createHash = (password) => {
   return bcrypt.hashSync(password, salt);
 };
 
-const useValidPassword = (user, password) => {
-  return bcrypt.compareSync(password, user.password);
+const useValidPassword = (password, hashedPassword) => {
+  return bcrypt.compareSync(password, hashedPassword);
 };
 
 module.exports = {

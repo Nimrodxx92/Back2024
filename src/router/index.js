@@ -7,6 +7,7 @@ const cartsDBController = require("../controllers/controllersDB/cartDB.controlle
 const viewsDBController = require("../controllers/controllersDB/views-template.controllers");
 const usersController = require("../controllers/controllersDB/users.controllers");
 const authController = require("../controllers/controllersDB/auth.controllers");
+const sessionsController = require("../controllers/controllersDB/sessions.controllers");
 
 const router = Router();
 
@@ -18,5 +19,6 @@ router.use("/cartsDB", cartsDBController);
 router.use("/auth", authController);
 router.use("/users", usersController);
 router.use("/", viewsDBController);
+router.use("/api/sessions", sessionsController);
 
 module.exports = router;

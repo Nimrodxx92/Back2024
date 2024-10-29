@@ -17,8 +17,9 @@ form.addEventListener("submit", (e) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      if (data.status === "success") {
-        window.location.href = data.redirectTo;
+      if (data.token) {
+        localStorage.setItem("jwtToken", data.token);
+        window.location.href = "/profile";
       } else {
         console.log(data.message);
       }

@@ -20,14 +20,12 @@ router.get("/signup", async (req, res) => {
   }
 });
 
-router.get("/profile", isAuth, async (req, res) => {
+router.get("/profile", isAuth, (req, res) => {
   try {
-    const { user } = req.session;
-
-    if (user.role === "admin") {
+    const user = req.user;
+    if (user.rol === "admin") {
       return res.redirect("/profileAdmin");
     }
-
     res.render("profile", { user });
   } catch (error) {
     console.error("Error:", error.message);
@@ -35,9 +33,9 @@ router.get("/profile", isAuth, async (req, res) => {
   }
 });
 
-router.get("/profileAdmin", isAuth, isAdmin, async (req, res) => {
+router.get("/profileAdmin", isAuth, isAdmin, (req, res) => {
   try {
-    const { user } = req.session;
+    const user = req.user;
     res.render("profileAdmin.handlebars", { user });
   } catch (error) {
     console.error("Error:", error.message);

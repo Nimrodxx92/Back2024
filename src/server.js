@@ -1,13 +1,16 @@
 const express = require("express");
+const cookieParser = require("cookie-parser");
 const configs = require("./configs/server.configs");
 const router = require("./router/index");
 const morgan = require("morgan");
 const handlebars = require("express-handlebars");
 const http = require("http");
 const setupSocketIo = require("./sockets");
+const initPassport = require("./configs/passport.configs");
 const session = require("express-session");
 const mongoConnect = require("./db/index");
 const MongoStore = require("connect-mongo");
+const passport = require("passport");
 
 const app = express();
 const server = http.createServer(app);
@@ -19,6 +22,7 @@ app.use(express.json()); // Transformar JSON a objeto JS
 app.use(express.urlencoded({ extended: true })); // Transformar formulario a objeto
 app.use(express.static(__dirname + "/public"));
 app.use(morgan("dev"));
+app.use(cookieParser());
 
 // Configurar el middleware de sesión
 app.use(
@@ -33,6 +37,10 @@ app.use(
     }),
   })
 );
+
+initPassport();
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.engine("handlebars", handlebars.engine()); // Config para handlebars
 app.set("views", __dirname + "/views"); // Config la carpeta para las plantillas
