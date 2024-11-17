@@ -20,6 +20,27 @@ router.get("/", async (req, res) => {
   }
 });
 
+// Ruta para crear un carrito nuevo
+router.post("/", async (req, res) => {
+  try {
+    // Crear un carrito vacío con un array de productos
+    const newCart = await cartsModel.create({
+      products: [], // El carrito empieza vacío
+    });
+
+    res.status(201).json({
+      status: "success",
+      payload: newCart,
+    });
+  } catch (error) {
+    console.error("Error al crear el carrito:", error.message);
+    res.status(500).json({
+      status: "error",
+      error: "Error interno del servidor al crear el carrito.",
+    });
+  }
+});
+
 // Ruta para agregar productos al carts
 router.post("/add-to-cart", async (req, res) => {
   try {

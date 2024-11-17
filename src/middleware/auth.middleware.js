@@ -1,22 +1,29 @@
-const passport = require("passport");
-
-const isAuth = (req, res, next) => {
-  passport.authenticate("current", { session: false }, (error, user) => {
-    if (error || !user) {
-      return res.status(401).json({ message: "No autorizado" });
-    }
-    req.user = user;
-    next();
-  })(req, res, next);
+const isAdmin = (req, res, next) => {
+  const user = req.user;
+  if (user?.role === "admin") {
+    return next();
+  }
+  return res
+    .status(403)
+    .json({ error: "Acceso denegado. Requiere rol de administrador." });
 };
 
-const isAdmin = (req, res, next) => {
-  if (!req.user || req.user.role !== "admin") {
-    return res
-      .status(403)
-      .json({ message: "No tienes permisos para ingresar" });
+const isUser = (req, res, next) => {
+  const user = req.user;
+  if (user?.role === "user") {
+    return next();
   }
+  return res
+    .status(403)
+    .json({ error: "Acceso denegado. Requiere rol de usuario." });
+};
+
+const isAuth = (req, res, next) => {
+  if (!req.isAuthenticated || !req.user) {
+    return res.status(403).json({ error: "Usuario no autenticado" });
+  }
+  console.log("Usuario autenticado:", req.user);
   next();
 };
 
-module.exports = { isAuth, isAdmin };
+module.exports = { isAdmin, isUser, isAuth };

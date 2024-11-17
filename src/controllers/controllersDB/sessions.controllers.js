@@ -29,6 +29,8 @@ router.post(
 
     let token = jwt.sign({ id: req.user._id }, JWT_SECRET, { expiresIn: 3600 });
 
+    console.log("Token generado:", token);
+
     return res
       .cookie("token", token, {
         httpOnly: true,

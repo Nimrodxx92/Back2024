@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { isAuth, isAdmin } = require("../../middleware/auth.middleware");
+const { isAdmin, isUser, isAuth } = require("../../middleware/auth.middleware");
 const router = Router();
 
 router.get("/login", async (req, res) => {
@@ -33,7 +33,7 @@ router.get("/profile", isAuth, (req, res) => {
   }
 });
 
-router.get("/profileAdmin", isAuth, isAdmin, (req, res) => {
+router.get("/profileAdmin", isUser, isAdmin, (req, res) => {
   try {
     const user = req.user;
     res.render("profileAdmin.handlebars", { user });

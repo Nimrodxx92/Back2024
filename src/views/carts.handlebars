@@ -19,6 +19,13 @@
                 <p>Título: {{product.title}}</p>
                 <p>Precio: {{product.price}}</p>
                 <p>Cantidad: {{quantity}}</p>
+
+                <!-- Botón para eliminar el producto -->
+
+                <button
+                  type="button"
+                  onclick="deleteProduct('{{_id}}', '{{product._id}}')"
+                >Eliminar producto</button>
               </li>
             {{/each}}
           </ul>
@@ -35,3 +42,5 @@
 <a href="/productsDB">
   <button>Volver a los productos</button>
 </a>
+
+<script src="/js/deleteCart.js"></script>

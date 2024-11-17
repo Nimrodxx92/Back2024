@@ -118,6 +118,7 @@ const initPassport = () => {
       },
       async (usuario, done) => {
         try {
+          console.log("Payload recibido:", usuario);
           return done(null, usuario);
         } catch (error) {
           console.error("Error en la estrategia `current`:", error);
