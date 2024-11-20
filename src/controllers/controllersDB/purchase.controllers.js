@@ -41,7 +41,7 @@ router.post("/:cid/purchase", async (req, res) => {
       code: `TCK-${Date.now()}`,
       purchase_datetime: new Date(),
       amount: totalAmount,
-      purchaser: req.user ? req.user.email : "anonimo@example.com",
+      purchaser: req.user ? req.user.email : "ejemplo@gmail.com",
     });
 
     // Actualizar carrito
@@ -76,7 +76,7 @@ router.get("/purchase-summary/:cid", async (req, res) => {
     }
 
     const ticket = await ticketDAO.findOne({
-      purchaser: req.user ? req.user.email : "anonimo@example.com",
+      purchaser: req.user ? req.user.email : "ejemplo@gmail.com",
     });
 
     if (!ticket) {
